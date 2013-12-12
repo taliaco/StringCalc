@@ -10,5 +10,10 @@ public class StringCalcTest {
 		StringCalc calc = new StringCalc();	
 		assertEquals(calc.Add(""), 0);
 	}
+	@Test
+	public void AddingOneNumberReturnNum() {
+		StringCalc calc = new StringCalc();	
+		assertEquals(calc.Add("1"), 1);
+	}
 
 }
