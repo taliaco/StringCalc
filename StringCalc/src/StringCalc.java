@@ -4,7 +4,7 @@ public class StringCalc {
 	public int Add(String string) {
 		// TODO Auto-generated method stub
 		
-		String[] numbers = string.split(",");
+		String[] numbers = string.split(",|\n");
 		
 		if(string.isEmpty())
 			return 0;
