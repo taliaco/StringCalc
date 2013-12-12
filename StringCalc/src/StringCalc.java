@@ -1,7 +1,7 @@
 
 public class StringCalc {
 
-	public int Add(String string) {
+	public int Add(String string) throws Exception {
 		// TODO Auto-generated method stub
 		
 		String[] numbers = string.split(",|\n");
@@ -15,7 +15,13 @@ public class StringCalc {
 			return getSum(numbers);
 		}
 	}
-	private int getSum(String[] numbers){
+	private int getSum(String[] numbers) throws Exception{
+		for (String i:numbers){
+			if (Integer.parseInt(i) < 0){
+				throw new Exception("negative number");
+			}
+		}
+		
 		int sum =0;
 		for (String i:numbers){
 			sum += Integer.parseInt(i);
