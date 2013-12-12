@@ -6,8 +6,9 @@ import org.junit.Test;
 public class StringCalcTest {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void AddingEmptyStringReturn0() {
+		StringCalc calc = new StringCalc();	
+		assertEquals(calc.Add(""), 0);
 	}
 
 }
