@@ -15,5 +15,10 @@ public class StringCalcTest {
 		StringCalc calc = new StringCalc();	
 		assertEquals(calc.Add("1"), 1);
 	}
+	@Test
+	public void AddingTowNumbersReturnSum() {
+		StringCalc calc = new StringCalc();	
+		assertEquals(calc.Add("1,2"), 3);
+	}
 
 }

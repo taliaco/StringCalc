@@ -3,13 +3,17 @@ public class StringCalc {
 
 	public int Add(String string) {
 		// TODO Auto-generated method stub
-		int num;
+		
+		String[] numbers = string.split(",");
 		if(string.isEmpty())
 			return 0;
-		else{
-			num = Integer.parseInt(string);
+		else if (string.length()==1){
+			return Integer.parseInt(string);
+			
 		}
-		return num;
+		else{
+			return (Integer.parseInt(numbers[0]) +  Integer.parseInt(numbers[1]));
+		}
 	}
 
 }
