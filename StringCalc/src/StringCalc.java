@@ -12,11 +12,15 @@ public class StringCalc {
 			return Integer.parseInt(string);
 		}
 		else{
-			return getSum(numbers[0], numbers[1]);
+			return getSum(numbers);
 		}
 	}
-	private int getSum(String a, String b){
-		return (Integer.parseInt(a)+Integer.parseInt(b));
+	private int getSum(String[] numbers){
+		int sum =0;
+		for (int i=0; i<numbers.length; i++){
+			sum += Integer.parseInt(numbers[i]);
+		}
+		return sum;
 	}
 
 }
