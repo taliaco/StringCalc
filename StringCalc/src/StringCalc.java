@@ -9,7 +9,7 @@ public class StringCalc {
 		if(string.isEmpty())
 			return 0;
 		else if (string.length()==1){
-			return Integer.parseInt(string);
+			return StringToInt(string);
 		}
 		else{
 			return getSum(numbers);
@@ -17,16 +17,18 @@ public class StringCalc {
 	}
 	private int getSum(String[] numbers) throws Exception{
 		for (String i:numbers){
-			if (Integer.parseInt(i) < 0){
+			if (StringToInt(i) < 0){
 				throw new Exception("negative number");
 			}
 		}
-		
 		int sum =0;
 		for (String i:numbers){
-			sum += Integer.parseInt(i);
+			sum += StringToInt(i);
 		}
 		return sum;
+	}
+	private int StringToInt(String str){
+		return Integer.parseInt(str);
 	}
 
 }
